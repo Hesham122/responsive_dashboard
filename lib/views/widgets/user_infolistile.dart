@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:responsive_dashboard/utls/app_assets.dart';
 import 'package:responsive_dashboard/utls/models/user_info_model.dart';
 import 'package:responsive_dashboard/utls/styles.dart';
 
@@ -17,13 +16,21 @@ final  UserInfoModel userInfoModel;
       color: const Color(0xFFFAFAFA),
       child: ListTile(
         leading: SvgPicture.asset(userInfoModel.image),
-        title: Text(
-          userInfoModel.title,
-          style: ResStyles.styleSimiBold16,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            userInfoModel.title,
+            style: ResStyles.styleSimiBold16(context),
+          ),
         ),
-        subtitle: Text(
-          userInfoModel.subTitle,
-          style: ResStyles.styleRegular12,
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            userInfoModel.subTitle,
+            style: ResStyles.styleRegular12(context),
+          ),
         ),
       ),
     );

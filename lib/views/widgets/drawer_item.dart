@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dashboard/utls/models/drawer_model.dart';
-import 'package:responsive_dashboard/utls/styles.dart';
 import 'package:responsive_dashboard/views/widgets/active_and_inactive_item.dart';
 
 class DrawerItem extends StatefulWidget {

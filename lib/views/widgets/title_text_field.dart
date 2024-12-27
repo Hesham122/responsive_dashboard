@@ -12,7 +12,7 @@ class TitleTextField extends StatelessWidget {
       children: [
         Text(
           title,
-          style: ResStyles.styleMedium16,
+          style: ResStyles.styleMedium16(context),
         ),
         CustomTextField(
           hint: hint,

@@ -1,4 +1,4 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utls/models/all_expenses_model.dart';
 import 'package:responsive_dashboard/utls/styles.dart';
 import 'package:responsive_dashboard/views/widgets/all_expenses_item_header.dart';
@@ -13,7 +13,7 @@ class SelectedItemExpenses extends StatelessWidget {
       decoration: ShapeDecoration(
         color: const Color(0xFF4EB7F2),
         shape: RoundedRectangleBorder(
-         
+          side: const BorderSide(width: 1, color: Color(0xFF4EB7F2)),
           borderRadius: BorderRadius.circular(12),
         ),
       ),
@@ -23,28 +23,39 @@ class SelectedItemExpenses extends StatelessWidget {
           AllExpensesItemHeader(
             image: allExpensesModel.image,
             isblue: Colors.white,
-            iswhite: Colors.white.withOpacity( 0.10000000149011612 ) ,
+            iswhite: Colors.white.withOpacity(0.10000000149011612),
           ),
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesModel.title,
-            style: ResStyles.styleMedium16.copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.title,
+              style: ResStyles.styleMedium16(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesModel.date,
-            style: ResStyles.styleRegular14.copyWith(color: const Color(0xFFFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.date,
+              style: ResStyles.styleRegular14(context)
+                  .copyWith(color: const Color(0xFFFAFAFA)),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpensesModel.price,
-            style: ResStyles.styleMedium20,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.price,
+              style: ResStyles.styleMedium20(context),
+            ),
           ),
         ],
       ),

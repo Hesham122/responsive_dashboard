@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
         child: Text(
           textt ?? "Send Money",
-          style: ResStyles.styleSimiBold18.copyWith(color: secColor?? Colors.white),
+          style: ResStyles.styleSimiBold18(context).copyWith(color: secColor?? Colors.white),
         ),
       ),
     );

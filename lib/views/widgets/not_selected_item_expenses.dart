@@ -31,23 +31,32 @@ class NotSelectedItemExpenses extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesModel.title,
-            style: ResStyles.styleMedium16,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.title,
+              style: ResStyles.styleMedium16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesModel.date,
-            style: ResStyles.styleRegular14,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.date,
+              style: ResStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpensesModel.price,
-            style: ResStyles.styleSimiBold24,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesModel.price,
+              style: ResStyles.styleSimiBold24(context),
+            ),
           ),
         ],
       ),
